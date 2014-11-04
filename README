@@ -1,0 +1,94 @@
+-*- encoding: utf-8; indent-tabs-mode: nil -*-
+
+=encoding utf-8
+
+=head1 Presentation
+
+This repository is  a very partial fork of Emacs.   Only one code file
+has  been  kept,  F<cal-french.el>,   the  code  for  converting  from
+Gregorian to French Revolutionary or the other way.
+
+=head1 Installation
+
+If Emacs is not running, copy F<cal-french.el> to
+F</path/to/emacs/site-lisp>, start Emacs. That's all.
+
+If Emacs is running, copy F<cal-french.el> to
+F</path/to/emacs/site-lisp>, and then
+
+  M-x load-file /path/to/emacs/site-lisp/cal-french.el
+
+If F</path/to/emacs/site-lisp> is displayed  in a C<dired> buffer, you
+can use the line-command C<L>.
+
+=head1 Usage
+
+Similar to the old  version of C<cal-french.el>.  Open the (Gregorian)
+calendar with
+
+  M-x calendar
+
+Then, go to any date of your choice and type C<p f>, this will display
+the French Revolutionary date of  the current day. C<p o> will display
+the current day in all the calendars known to Emacs.
+
+Alternately,  you  can   go  to  a  day  if   you  know  which  French
+Revolutionary date it  is associated with. Type C<g  f> and Emacs asks
+you:
+
+=over 4
+
+=item * the year,
+
+=item * the month (Vendémiaire, Nivôse, etc) or a feast (Jour des récompenses)
+
+=item * the day number (except if you gave a feast at the previous question).
+
+=back
+
+=head1 Changes
+
+=head2 Day Name
+
+Instead  of just  displaying  "18  Brumaire an  8  de la  Révolution",
+F<cal-french.el>  now  displays  "Octidi   18  Brumaire  an  8  de  la
+Révolution".
+
+Not available yet.
+
+=head2 Additional Days
+
+Displaying "Jour  du Travail de l'année  222 de la  Révolution" is not
+very convenient, you cannot guess  whether this day is before or after
+"Jour du Génie de l'année 222 de la Révolution".  This changes gives a
+number in the 1-to-5 range (or 1-to-6 on leap years).  Additionally, I
+found in a  book from the French Revolution era  that these years bear
+the   same  names   as  the   other:  "Primidi",   "Duodi"   etc.   So
+F<cal-french.el> will display:
+
+   "Duodi 2 jour complémentaire an 222 de la Révolution, Jour du Génie"
+
+   "Tridi 3 jour complémentaire an 222 de la Révolution, Jour du Travail"
+
+In  addition,  when  using  C<g   f>,  you  can  now  reply  with  the
+pseudo-month "jour complémentaire", and then a number in the 1-to-5 or
+1-to-6 range.
+
+Not available yet.
+
+=head1 Feasts
+
+Actually, not  only the 5 or  6 end-of-year additional  days, but also
+the 360 normal days had  a feast. So C<cal-french.el> will display the
+feast for all days, for example:
+
+  "Primidi 1 Vendémiaire an  223 de la Révolution, Jour du Raisin"
+
+Of course, all feasts are available when answering to C<g f>.
+
+Not available yet.
+
+=head1 License
+
+Since this  repository is some kind  of fork of Emacs,  the license is
+the same, that is, GPL v3 or an higher version.

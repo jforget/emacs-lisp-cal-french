@@ -1,0 +1,95 @@
+-*- encoding: utf-8; indent-tabs-mode: nil -*-
+
+=encoding utf-8
+
+=head1 Présentation
+
+Ce dépôt est un I<fork> très restreint d'Emacs.  Restreint parce qu'un
+seul  fichier de  code a  été repris,  le fichier  F<cal-french.el> de
+conversion entre le calendrier grégorien et le calendrier républicain.
+
+=head1 Installation
+
+Si Emacs n'est pas démarré, copiez F<cal-french.el> dans le répertoire
+F</chemin/vers/emacs/site-lisp>, lancez une  session d'Emacs. Et c'est
+tout.
+
+Si une session Emacs est déjà en service, copiez F<cal-french.el> dans
+le répertoire F</chemin/vers/emacs/site-lisp>, puis exécutez :
+
+  M-x load-file /chemin/d/acces/a/emacs/site-lisp/cal-french.el
+
+ou bien,  si F<site-lisp>  est affiché en  mode C<dired>,  utilisez la
+commande ligne C<L>.
+
+=head1 Utilisation
+
+L'utilisation est quasiment identique  à l'ancienne version. Lancez le
+calendrier avec
+
+  M-x calendar
+
+puis  déplacez-vous  jusqu'au jour  de  votre  choix.   Si vous  tapez
+C<p f>, alors la date s'affiche selon le calendrier républicain.  Avec
+C<p o>, vous avez la date dans tous les calendriers connus par Emacs.
+
+Ou  alors, tapez  C<g f>  pour vous  déplacer vers  un jour  dont vous
+connaissez la date républicaine. Emacs vous demande alors :
+
+=over 4
+
+=item * l'année,
+
+=item * le mois (Vendémiaire,  Nivôse, etc) ou une festivité (Jour des
+récompenses)
+
+=item * le numéro du jour dans  le mois (sauf si vous avez demandé une
+festivité à la question précédente).
+
+=back
+
+=head1 Changements
+
+=head2 Nom du jour
+
+Au lieu  d'afficher simplement  "18 Brumaire an  8 de  la Révolution",
+F<cal-french.el>  affiche maintenant "Octidi  18 Brumaire  an 8  de la
+Révolution".
+
+Cette évolution n'est pas encore disponible.
+
+=head2 Jours complémentaires
+
+Indiquer "Jour du  Travail de l'année 222 de  la Révolution" n'est pas
+très commode, vous ne savez pas comment le placer par rapport au "Jour
+du Génie de  l'année 222 de la Révolution".   Cette modification donne
+ainsi le numéro de 1 à 5  (ou 6 les années bissextiles). De plus, j'ai
+trouvé dans un  livre de l'époque que ces jours  avaient eux aussi les
+noms "Primidi", "Duodi" etc.  Donc F<cal-french.el> affichera :
+
+   "Duodi 2 jour complémentaire an 222 de la Révolution, Jour du Génie"
+
+   "Tridi 3 jour complémentaire an 222 de la Révolution, Jour du Travail"
+
+De plus, pour  C<g f>, vous pouvez maintenant  demander le pseudo-mois
+"jour complémentaire", puis un numéro de 1 à 5 (ou 6 selon l'année).
+
+Cette évolution n'est pas encore disponible.
+
+=head2 Festivités
+
+Il  existe   des  fêtes   non  seulement  pour   les  5  ou   6  jours
+complémentaires de la  fin de l'année, mais aussi  pour les 360 autres
+jours. Avec cette adaptation, C<cal-french.el> affichera :
+
+  "Primidi 1 Vendémiaire an  223 de la Révolution, Jour du Raisin"
+
+Et  bien sûr,  C<g f>  dispose de  la liste  de ces  fêtes lors  de la
+deuxième question.
+
+Cette évolution n'est pas encore disponible.
+
+=head1 Licence
+
+Comme ce dépôt est, en quelque sorte, un I<fork> d'Emacs, la licence
+est la même, c'est-à-dire la GPL V3 ou version supérieure.
