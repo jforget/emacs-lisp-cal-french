@@ -76,7 +76,7 @@ pseudo-month "jour complémentaire", and then a number in the 1-to-5 or
 
 Not available yet.
 
-=head1 Feasts
+=head2 Feasts
 
 Actually, not  only the 5 or  6 end-of-year additional  days, but also
 the 360 normal days had  a feast. So C<cal-french.el> will display the
@@ -88,7 +88,20 @@ Of course, all feasts are available when answering to C<g f>.
 
 Not available yet.
 
+=head1 Various Topics
+
+=head2 File F<verif-calfrench.el>
+
+This  file is  used to  check  the changes  to F<cal-french.el>.   Its
+output is  very similar  to TAP (Test  Anything Protocol), so  a human
+reading it will  not be disoriented. Yet, a program  will have to make
+efforts to process it. See L<http://testanything.org/>.
+
+The  file is  run from  the command  line.  It  uses Emacs  as  a Lisp
+interpreter, not a text editor. There are no parameters.
+
 =head1 License
 
 Since this  repository is some kind  of fork of Emacs,  the license is
-the same, that is, GPL v3 or an higher version.
+the  same, that  is, GPL  v3 or  a higher  version.  The  text  of the
+license is in the file F<LICENSE>.

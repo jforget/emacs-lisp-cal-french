@@ -89,7 +89,23 @@ deuxième question.
 
 Cette évolution n'est pas encore disponible.
 
+=head1 Sujets divers
+
+=head2 Fichier F<verif-calfrench.el>
+
+Ce fichier sert à  tester les changements apportés à F<cal-french.el>.
+Le  texte  en  sortie  ressemble  beaucoup  au  TAP  (I<Test  Anything
+Protocol>).  C'est suffisamment proche  pour qu'un humain comprenne ce
+qui  se  passe.  À  l'inverse,  un  programme  d'analyse de  TAP  aura
+beaucoup de peine à s'en dépatouiller. Cf. L<http://testanything.org/>.
+
+Le test est  lancé à partir de la ligne de  commande. Il utilise Emacs
+en tant  qu'interpréteur Lisp,  sans tirer partie  des fonctionnalités
+d'éditeur de texte. Il n'y a pas de paramètres.
+
 =head1 Licence
 
-Comme ce dépôt est, en quelque sorte, un I<fork> d'Emacs, la licence
-est la même, c'est-à-dire la GPL V3 ou version supérieure.
+Comme ce dépôt  est, en quelque sorte, un  I<fork> d'Emacs, la licence
+est la même, c'est-à-dire la GPL V3 ou version supérieure. Le texte de
+la licence se trouve dans le fichier F<LICENSE>, en anglais.
+
