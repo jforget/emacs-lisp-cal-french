@@ -47,7 +47,12 @@
 
 (defconst calendar-french-day-name-array
   ["Primidi" "Duodi" "Tridi" "Quartidi" "Quintidi" "Sextidi" "Septidi"
-   "Octidi" "Nonidi" "Decadi"]
+   "Octidi" "Nonidi" "De'cadi"]
+  "Array of day names in the French calendar.")
+
+(defconst calendar-french-multibyte-day-name-array
+  ["Primidi" "Duodi" "Tridi" "Quartidi" "Quintidi" "Sextidi" "Septidi"
+   "Octidi" "Nonidi" "Décadi"]
   "Array of day names in the French calendar.")
 
 (defconst calendar-french-special-days-array
@@ -76,7 +81,9 @@
 
 (defun calendar-french-day-name-array ()
   "Return the array of day names."
-  calendar-french-day-name-array)
+  (if (calendar-french-accents-p)
+      calendar-french-multibyte-day-name-array
+  calendar-french-day-name-array))
 
 (defun calendar-french-special-days-array ()
   "Return the special day names, depending on whether accents are available."
@@ -178,8 +185,9 @@ Defaults to today's date if DATE is not given."
                        y))
      (t (format
          (if (calendar-french-accents-p)
-             "%d %s an %d de la Révolution"
-           "%d %s an %d de la Re'volution")
+             "%s %d %s an %d de la Révolution"
+           "%s %d %s an %d de la Re'volution")
+         (aref (calendar-french-day-name-array) (% (1- d) 10))
          d
          (aref (calendar-french-month-name-array) (1- m))
          y)))))
