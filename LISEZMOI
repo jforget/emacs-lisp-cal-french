@@ -56,7 +56,7 @@ Au lieu  d'afficher simplement  "18 Brumaire an  8 de  la Révolution",
 F<cal-french.el>  affiche maintenant "Octidi  18 Brumaire  an 8  de la
 Révolution".
 
-Cette évolution n'est pas encore disponible.
+Cette évolution est disponible (commit e4365c5).
 
 =head2 Jours complémentaires
 

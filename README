@@ -54,7 +54,7 @@ Instead  of just  displaying  "18  Brumaire an  8  de la  Révolution",
 F<cal-french.el>  now  displays  "Octidi   18  Brumaire  an  8  de  la
 Révolution".
 
-Not available yet.
+Available with commit e4365c5.
 
 =head2 Additional Days
 
