@@ -37,12 +37,14 @@
 
 (defconst calendar-french-month-name-array
   ["Vende'miaire" "Brumaire" "Frimaire" "Nivo^se" "Pluvio^se" "Vento^se"
-   "Germinal" "Flore'al" "Prairial" "Messidor" "Thermidor" "Fructidor"]
+   "Germinal" "Flore'al" "Prairial" "Messidor" "Thermidor" "Fructidor"
+   "jour comple'mentaire"]
   "Array of month names in the French calendar.")
 
 (defconst calendar-french-multibyte-month-name-array
   ["Vendémiaire" "Brumaire" "Frimaire" "Nivôse" "Pluviôse" "Ventôse"
-   "Germinal" "Floréal" "Prairial" "Messidor" "Thermidor" "Fructidor"]
+   "Germinal" "Floréal" "Prairial" "Messidor" "Thermidor" "Fructidor"
+   "jour complémentaire"]
   "Array of multibyte month names in the French calendar.")
 
 (defconst calendar-french-day-name-array
@@ -179,10 +181,13 @@ Defaults to today's date if DATE is not given."
     (cond
      ((< y 1) "")
      ((= m 13) (format (if (calendar-french-accents-p)
-                           "Jour %s de l'Année %d de la Révolution"
-                         "Jour %s de l'Anne'e %d de la Re'volution")
-                       (aref (calendar-french-special-days-array) (1- d))
-                       y))
+                           "%s %d %s an %d de la Révolution, jour %s"
+                         "%s %d %s an %d de la Re'volution, jour %s")
+         	       (aref (calendar-french-day-name-array) (% (1- d) 10))
+         	       d
+                       (aref (calendar-french-month-name-array) (1- m))
+                       y
+                       (aref (calendar-french-special-days-array) (1- d)) ))
      (t (format
          (if (calendar-french-accents-p)
              "%s %d %s an %d de la Révolution"
@@ -240,12 +245,12 @@ Echo French Revolutionary date unless NOECHO is non-nil."
                         month-list
                         nil t)
                        (calendar-make-alist month-list 1 'car) t)))
-          (day (if (> month 12)
-                   (- month 12)
+          (day (if (> month 13)
+                   (- month 13)
                  (calendar-read
                   "Jour (1-30): "
                   (lambda (x) (and (<= 1 x) (<= x 30))))))
-          (month (if (> month 12) 13 month)))
+          (month (if (> month 13) 13 month)))
      (list (list month day year))))
   (calendar-goto-date (calendar-gregorian-from-absolute
                        (calendar-french-to-absolute date)))
