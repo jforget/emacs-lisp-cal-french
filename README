@@ -90,6 +90,17 @@ Not available yet.
 
 =head1 Various Topics
 
+=head2 Format of the F<README> and F<LISEZMOI> files
+
+The format  of the F<README> and  F<LISEZMOI> files is  POD (Plain Old
+Documentation), well-known  in the Perl world.  This  is simple enough
+so  unaware  readers  can  read  a  POD file  without  being  lost  in
+marking. If you want formatted output, type
+
+  perldoc README
+
+or use tools such as C<pod2html> or C<pod2latex>.
+
 =head2 File F<verif-calfrench.el>
 
 This  file is  used to  check  the changes  to F<cal-french.el>.   Its

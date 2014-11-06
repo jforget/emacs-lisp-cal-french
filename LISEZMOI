@@ -67,9 +67,9 @@ ainsi le numéro de 1 à 5  (ou 6 les années bissextiles). De plus, j'ai
 trouvé dans un  livre de l'époque que ces jours  avaient eux aussi les
 noms "Primidi", "Duodi" etc.  Donc F<cal-french.el> affichera :
 
-   "Duodi 2 jour complémentaire an 222 de la Révolution, Jour du Génie"
+   "Duodi 2 jour complémentaire an 222 de la Révolution, jour du Génie"
 
-   "Tridi 3 jour complémentaire an 222 de la Révolution, Jour du Travail"
+   "Tridi 3 jour complémentaire an 222 de la Révolution, jour du Travail"
 
 De plus, pour  C<g f>, vous pouvez maintenant  demander le pseudo-mois
 "jour complémentaire", puis un numéro de 1 à 5 (ou 6 selon l'année).
@@ -82,7 +82,7 @@ Il  existe   des  fêtes   non  seulement  pour   les  5  ou   6  jours
 complémentaires de la  fin de l'année, mais aussi  pour les 360 autres
 jours. Avec cette adaptation, C<cal-french.el> affichera :
 
-  "Primidi 1 Vendémiaire an  223 de la Révolution, Jour du Raisin"
+  "Primidi 1 Vendémiaire an  223 de la Révolution, jour du Raisin"
 
 Et  bien sûr,  C<g f>  dispose de  la liste  de ces  fêtes lors  de la
 deuxième question.
@@ -90,6 +90,18 @@ deuxième question.
 Cette évolution n'est pas encore disponible.
 
 =head1 Sujets divers
+
+=head2 Format des fichiers F<LISEZMOI> et F<README>
+
+Le format  utilisé pour les  fichiers F<LISEZMOI> et F<README>  est le
+format POD (I<Plain Old Documentation>), très répandu au sein du monde
+Perl.  Ce  format est suffisamment simple pour  qu'un lecteur inaverti
+puisse le lire « dans le texte  » sans être dérouté. Si vous voulez le
+texte formatté, utilisez :
+
+  perldoc LISEZMOI
+
+ou bien les outils comme C<pod2html> et C<pod2latex>.
 
 =head2 Fichier F<verif-calfrench.el>
 
