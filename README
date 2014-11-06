@@ -54,7 +54,7 @@ Instead  of just  displaying  "18  Brumaire an  8  de la  Révolution",
 F<cal-french.el>  now  displays  "Octidi   18  Brumaire  an  8  de  la
 Révolution".
 
-Available with commit e4365c5.
+Available with commit e4365c5, tag v1.
 
 =head2 Additional Days
 
@@ -74,7 +74,7 @@ In  addition,  when  using  C<g   f>,  you  can  now  reply  with  the
 pseudo-month "jour complémentaire", and then a number in the 1-to-5 or
 1-to-6 range.
 
-Not available yet.
+Available with commit b6dc17c, tag v2.
 
 =head2 Feasts
 

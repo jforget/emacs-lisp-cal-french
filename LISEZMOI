@@ -56,7 +56,7 @@ Au lieu  d'afficher simplement  "18 Brumaire an  8 de  la Révolution",
 F<cal-french.el>  affiche maintenant "Octidi  18 Brumaire  an 8  de la
 Révolution".
 
-Cette évolution est disponible (commit e4365c5).
+Cette évolution est disponible (commit e4365c5, tag v1).
 
 =head2 Jours complémentaires
 
@@ -74,7 +74,7 @@ noms "Primidi", "Duodi" etc.  Donc F<cal-french.el> affichera :
 De plus, pour  C<g f>, vous pouvez maintenant  demander le pseudo-mois
 "jour complémentaire", puis un numéro de 1 à 5 (ou 6 selon l'année).
 
-Cette évolution n'est pas encore disponible.
+Cette évolution est disponible (commit b6dc17c, tag v2).
 
 =head2 Festivités
 
