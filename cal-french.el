@@ -245,11 +245,13 @@ Echo French Revolutionary date unless NOECHO is non-nil."
                         month-list
                         nil t)
                        (calendar-make-alist month-list 1 'car) t)))
+          (last-day (if (> month 13) (calendar-french-last-day-of-month 13 year)
+                         (calendar-french-last-day-of-month month year)))
           (day (if (> month 13)
                    (- month 13)
                  (calendar-read
-                  "Jour (1-30): "
-                  (lambda (x) (and (<= 1 x) (<= x 30))))))
+                  (format "Jour (1-%d): " last-day)
+                  (lambda (x) (and (<= 1 x) (<= x last-day))))))
           (month (if (> month 13) 13 month)))
      (list (list month day year))))
   (calendar-goto-date (calendar-gregorian-from-absolute
