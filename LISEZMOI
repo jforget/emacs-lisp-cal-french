@@ -89,6 +89,30 @@ deuxième question.
 
 Cette évolution n'est pas encore disponible.
 
+=head2 Festivités (suite)
+
+Il y a deux problèmes  avec la précédente améliorations, concernant la
+fonction C<calendar-french-goto-date> activée par C<g f>.
+
+Si   l'utilisateur  entre   une  année   normale  (pas   opposition  à
+bissextile),  puis tape  C<j> et  deux  fois la  touche de  tabulation
+(complétion  automatique),  il  se  retrouve  avec une  liste  de  366
+S<entrées :> le pseudo-mois  "jour complémentaire", puis les fêtes des
+365 jours de l'année.  Un peu trop long pour être pratique.
+
+D'autre part, si l'utilisateur  n'est pas d'origine francophone (*) il
+aura  des  problèmes  pour   choisir  entre,  par  exemple,  "jour  du
+coriandre" et "jour de la coriandre".
+
+(*)  et   même  pour   les  utilisateurs  d'origine   francophone.  En
+particulier, j'ai longtemps fait l'erreur pour la coriandre.
+
+La modification consiste donc à  ne plus proposer une liste avec "jour
+du  raisin", "jour  de  la coriandre"  et  ainsi de  suite, mais  avec
+seulement "raisin", "coriandre" etc.
+
+Cette évolution n'est pas encore disponible.
+
 =head1 Sujets divers
 
 =head2 Format des fichiers F<LISEZMOI> et F<README>

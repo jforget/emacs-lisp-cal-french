@@ -88,6 +88,27 @@ Of course, all feasts are available when answering to C<g f>.
 
 Not available yet.
 
+=head2 Feasts (second take)
+
+There are  two problems with  the functionality above, when  using the
+C<calendar-french-goto-date> function, tiggered by C<g f>.
+
+First, if the user enters a normal (non-leap) year and then types C<j>
+and auto-complete twice  (tabulation), he gets a list  of 366 entries:
+the pseudo-month "jour complémentaire" and  the 365 feasts for the 365
+days of the year.
+
+Second, if  the user is not  a native French-speaker (*)  he will have
+trouble  sorting  masculine  and   feminine  words:  is  it  "jour  du
+coriandre" or "jour de la coriandre"?
+
+(*) and even for native  French-speakers as myself. For example, for a
+long time I did the mistake with "coriandre".
+
+The update consists of giving a list which no longer contains "jour du
+raisin", "jour  de la coriandre" and  the like, but  only "raisin" and
+"coriandre".
+
 =head1 Various Topics
 
 =head2 Format of the F<README> and F<LISEZMOI> files
