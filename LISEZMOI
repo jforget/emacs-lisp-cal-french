@@ -139,6 +139,19 @@ Le test est  lancé à partir de la ligne de  commande. Il utilise Emacs
 en tant  qu'interpréteur Lisp,  sans tirer partie  des fonctionnalités
 d'éditeur de texte. Il n'y a pas de paramètres.
 
+=head2 D'où vient ce dépôt ?
+
+J'ai    commencé   par    cloner   le    miroir   Emacs    de   GitHub
+(L<https://github.com/emacs-mirror/emacs>).  Ensuite,  j'ai  écrit  un
+script Perl pour extraire tous les commits concernant F<cal-french.el>
+et les fichiers de licence F<COPYING> et F<GETTING.GNU.SOFTWARE>, pour
+les injecter dans un dépôt vide.
+
+Si cela  vous intéresse, je  peux vous envoyer  le script. Mais  je ne
+fournis  aucune aide  ni aucun  soutien. Vous  devrez lire  le fichier
+source (avec des  commentaires en français ainsi que  quelques noms de
+variables, pas tous).
+
 =head1 Licence
 
 Comme ce dépôt  est, en quelque sorte, un  I<fork> d'Emacs, la licence

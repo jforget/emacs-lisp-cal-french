@@ -132,6 +132,18 @@ efforts to process it. See L<http://testanything.org/>.
 The  file is  run from  the command  line.  It  uses Emacs  as  a Lisp
 interpreter, not a text editor. There are no parameters.
 
+=head2 Where does this repository come from?
+
+I   first   cloned   the   Emacs   mirror   repository   from   GitHub
+(L<https://github.com/emacs-mirror/emacs>). Then I wrote a Perl script
+which  would extract  all commits  involving F<cal-french.el>  and the
+license  files F<COPYING> or  F<GETTING.GNU.SOFTWARE> and  inject them
+into an empty repository.
+
+If you ask, I  can send you this script. But I  do not provide support
+for it. You will have to read the source (with French-written comments
+and some French-named variables).
+
 =head1 License
 
 Since this  repository is some kind  of fork of Emacs,  the license is
