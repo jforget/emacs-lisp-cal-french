@@ -89,7 +89,7 @@ Of course, all feasts are available when answering to C<g f>.
 A big disadvantage is that  the size or F<cal-french.el> switches from
 about 10 K to about 30 K.
 
-Available.
+Available with commit 6060f52, tag v3.
 
 =head2 Feasts (second take)
 

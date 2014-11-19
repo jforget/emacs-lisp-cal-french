@@ -90,7 +90,7 @@ deuxième question.
 Gros désavantage  : la taille de F<cal-french.el>  passe d'une dizaine
 de Ko à une trentaine.
 
-Cette évolution est encore disponible.
+Cette évolution est disponible (commit 6060f52, tag v3).
 
 =head2 Festivités (suite)
 
