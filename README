@@ -86,7 +86,10 @@ feast for all days, for example:
 
 Of course, all feasts are available when answering to C<g f>.
 
-Not available yet.
+A big disadvantage is that  the size or F<cal-french.el> switches from
+about 10 K to about 30 K.
+
+Available.
 
 =head2 Feasts (second take)
 

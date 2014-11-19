@@ -391,7 +391,7 @@ Defaults to today's date if DATE is not given."
 Echo French Revolutionary date unless NOECHO is non-nil."
   (interactive
    (let* ((months (calendar-french-month-name-array))
-          (special-days (calendar-french-special-days-array))
+          (feasts (calendar-french-feasts-array))
           (year (progn
                   (calendar-read
                    (if (calendar-french-accents-p)
@@ -409,18 +409,21 @@ Echo French Revolutionary date unless NOECHO is non-nil."
                            (if (calendar-french-leap-year-p year)
                                (mapcar
                                 (lambda (x) (concat "Jour " x))
-                                calendar-french-special-days-array)
+                                feasts)
                              (reverse
                               (cdr ; we don't want rev. day in a non-leap yr
                                (reverse
                                 (mapcar
                                  (lambda (x)
                                    (concat "Jour " x))
-                                 special-days))))))))
+                                 feasts))))))))
           (completion-ignore-case t)
+          (month-prompt (if (calendar-french-accents-p)
+                        "Mois ou \"jour complémentaire\" ou \"jour de ...\": "
+                        "Mois ou \"jour comple'mentaire\" ou \"jour de ...\": "))
           (month (cdr (assoc-string
                        (completing-read
-                        "Mois ou Sansculottide: "
+                        month-prompt
                         month-list
                         nil t)
                        (calendar-make-alist month-list 1 'car) t)))
@@ -431,7 +434,9 @@ Echo French Revolutionary date unless NOECHO is non-nil."
                  (calendar-read
                   (format "Jour (1-%d): " last-day)
                   (lambda (x) (and (<= 1 x) (<= x last-day))))))
-          (month (if (> month 13) 13 month)))
+          (month (if (> month 13) 1 month))) ; all days in Vendémiaire, because 31 Vendémiaire will be automatically
+                                             ; normalized to 1 Brumaire, 32 Vnd to 2 Bru, 61 Vnd to 1 Frimaire, etc
+                                             ; until 365 Vnd normalized to 5 jour complémentaire
      (list (list month day year))))
   (calendar-goto-date (calendar-gregorian-from-absolute
                        (calendar-french-to-absolute date)))

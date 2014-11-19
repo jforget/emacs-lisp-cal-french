@@ -87,7 +87,10 @@ jours. Avec cette adaptation, C<cal-french.el> affichera :
 Et  bien sûr,  C<g f>  dispose de  la liste  de ces  fêtes lors  de la
 deuxième question.
 
-Cette évolution n'est pas encore disponible.
+Gros désavantage  : la taille de F<cal-french.el>  passe d'une dizaine
+de Ko à une trentaine.
+
+Cette évolution est encore disponible.
 
 =head2 Festivités (suite)
 
