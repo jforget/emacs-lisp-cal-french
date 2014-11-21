@@ -114,7 +114,7 @@ La modification consiste donc à  ne plus proposer une liste avec "jour
 du  raisin", "jour  de  la coriandre"  et  ainsi de  suite, mais  avec
 seulement "raisin", "coriandre" etc.
 
-Cette évolution n'est pas encore disponible.
+Cette évolution est disponible.
 
 =head1 Sujets divers
 
@@ -142,6 +142,16 @@ Le test est  lancé à partir de la ligne de  commande. Il utilise Emacs
 en tant  qu'interpréteur Lisp,  sans tirer partie  des fonctionnalités
 d'éditeur de texte. Il n'y a pas de paramètres.
 
+Je  me  suis  aperçu que  le  dépôt  Emacs  sur Github  comportait  un
+répertoire F<test> avec  des scripts de test automatisés.  Je n'ai pas
+compris  comme c'était censé  fonctionner. Je  comprends mieux  TAP et
+comme vous pouvez le voir dans le tout premier I<commit> de :
+
+  L<https://github.com/jforget/French-Revolution-calendar-utilities>
+
+en  octobre 2012, j'ai  toujours eu  l'intention d'utiliser  un script
+produisant du quasi-TAP pour tester mes modifications.
+
 =head2 D'où vient ce dépôt ?
 
 J'ai    commencé   par    cloner   le    miroir   Emacs    de   GitHub
@@ -154,6 +164,8 @@ Si cela  vous intéresse, je  peux vous envoyer  le script. Mais  je ne
 fournis  aucune aide  ni aucun  soutien. Vous  devrez lire  le fichier
 source (avec des  commentaires en français ainsi que  quelques noms de
 variables, pas tous).
+
+Pour me joindre, C<JFORGET> arobase C<cpan> point C<org>.
 
 =head1 Licence
 

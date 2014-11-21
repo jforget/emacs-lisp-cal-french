@@ -112,6 +112,8 @@ The update consists of giving a list which no longer contains "jour du
 raisin", "jour  de la coriandre" and  the like, but  only "raisin" and
 "coriandre".
 
+Available with current commit.
+
 =head1 Various Topics
 
 =head2 Format of the F<README> and F<LISEZMOI> files
@@ -135,6 +137,16 @@ efforts to process it. See L<http://testanything.org/>.
 The  file is  run from  the command  line.  It  uses Emacs  as  a Lisp
 interpreter, not a text editor. There are no parameters.
 
+I  noticed recently  that the  Emacs repository  in Github  contains a
+F<test> directory with scripts that seem to be automated tests.  I did
+not understand how  they work. I am  more at ease with TAP  and as you
+can see in the very first commit of:
+
+  L<https://github.com/jforget/French-Revolution-calendar-utilities>
+
+since at least October 2012, I always meant to check my updates with a
+TAP-alike script.
+
 =head2 Where does this repository come from?
 
 I   first   cloned   the   Emacs   mirror   repository   from   GitHub
@@ -146,6 +158,8 @@ into an empty repository.
 If you ask, I  can send you this script. But I  do not provide support
 for it. You will have to read the source (with French-written comments
 and some French-named variables).
+
+You can reach me at C<JFORGET> at C<cpan> dot C<org>.
 
 =head1 License
 

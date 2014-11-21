@@ -279,6 +279,17 @@
       calendar-french-multibyte-feasts-array
     calendar-french-feasts-array))
 
+(defun calendar-french-trim-feast (feast)
+  "Remove the article from the feast, e.g. \"du Raisin\" -> \"Raisin\"
+or \"de la Vertu\" -> \"Vertu\""
+  (cond
+     ((equal (substring feast 0 3) "du ")    (substring feast 3))
+     ((equal (substring feast 0 6) "de la ") (substring feast 6))
+     ((equal (substring feast 0 5) "de l'")  (substring feast 5))
+     ((equal (substring feast 0 4) "des ")   (substring feast 4))
+     (t feast))
+)
+
 (defun calendar-french-leap-year-p (year)
   "True if YEAR is a leap year on the French Revolutionary calendar.
 For Gregorian years 1793 to 1805, the years of actual operation of the
@@ -407,20 +418,17 @@ Echo French Revolutionary date unless NOECHO is non-nil."
            (mapcar 'list
                    (append months
                            (if (calendar-french-leap-year-p year)
-                               (mapcar
-                                (lambda (x) (concat "Jour " x))
+                               (mapcar 'calendar-french-trim-feast
                                 feasts)
                              (reverse
                               (cdr ; we don't want rev. day in a non-leap yr
                                (reverse
-                                (mapcar
-                                 (lambda (x)
-                                   (concat "Jour " x))
+                                (mapcar 'calendar-french-trim-feast
                                  feasts))))))))
           (completion-ignore-case t)
           (month-prompt (if (calendar-french-accents-p)
-                        "Mois ou \"jour complémentaire\" ou \"jour de ...\": "
-                        "Mois ou \"jour comple'mentaire\" ou \"jour de ...\": "))
+                        "Mois ou \"jour complémentaire\" ou fête: "
+                        "Mois ou \"jour comple'mentaire\" ou fe^te: "))
           (month (cdr (assoc-string
                        (completing-read
                         month-prompt
@@ -434,9 +442,11 @@ Echo French Revolutionary date unless NOECHO is non-nil."
                  (calendar-read
                   (format "Jour (1-%d): " last-day)
                   (lambda (x) (and (<= 1 x) (<= x last-day))))))
-          (month (if (> month 13) 1 month))) ; all days in Vendémiaire, because 31 Vendémiaire will be automatically
-                                             ; normalized to 1 Brumaire, 32 Vnd to 2 Bru, 61 Vnd to 1 Frimaire, etc
-                                             ; until 365 Vnd normalized to 5 jour complémentaire
+          (month (if (> month 13) 1 month))) ; all days in Vendémiaire and numbered 1 to 365
+                                             ; e.g., "Pomme" gives 31 Vendémiaire automatically normalized to 1 Brumaire
+                                             ; "Céleri" gives 32 Vnd normalized to 2 Bru,
+                                             ; "Raiponce" gives 61 Vnd normalized to 1 Frimaire, etc
+                                             ; until "Récompences" which gives 365 Vnd normalized to 5 jour complémentaire
      (list (list month day year))))
   (calendar-goto-date (calendar-gregorian-from-absolute
                        (calendar-french-to-absolute date)))
