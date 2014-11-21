@@ -112,7 +112,7 @@ The update consists of giving a list which no longer contains "jour du
 raisin", "jour  de la coriandre" and  the like, but  only "raisin" and
 "coriandre".
 
-Available with current commit.
+Available with commit 68384aa, tag v4.
 
 =head1 Various Topics
 

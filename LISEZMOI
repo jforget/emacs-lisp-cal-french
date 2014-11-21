@@ -114,7 +114,7 @@ La modification consiste donc à  ne plus proposer une liste avec "jour
 du  raisin", "jour  de  la coriandre"  et  ainsi de  suite, mais  avec
 seulement "raisin", "coriandre" etc.
 
-Cette évolution est disponible.
+Cette évolution est disponible (commit 68384aa, tag v4).
 
 =head1 Sujets divers
 
