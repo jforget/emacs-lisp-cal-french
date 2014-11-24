@@ -71,6 +71,8 @@ noms "Primidi", "Duodi" etc.  Donc F<cal-french.el> affichera :
 
    "Tridi 3 jour complémentaire an 222 de la Révolution, jour du Travail"
 
+Cf. L<http://datetime.mongueurs.net/Histoire/s-c/01-g.fr.html>.
+
 De plus, pour  C<g f>, vous pouvez maintenant  demander le pseudo-mois
 "jour complémentaire", puis un numéro de 1 à 5 (ou 6 selon l'année).
 

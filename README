@@ -62,13 +62,15 @@ Displaying "Jour  du Travail de l'année  222 de la  Révolution" is not
 very convenient, you cannot guess  whether this day is before or after
 "Jour du Génie de l'année 222 de la Révolution".  This changes gives a
 number in the 1-to-5 range (or 1-to-6 on leap years).  Additionally, I
-found in a  book from the French Revolution era  that these years bear
+found in a  book from the French Revolution era  that these days bear
 the   same  names   as  the   other:  "Primidi",   "Duodi"   etc.   So
 F<cal-french.el> will display:
 
    "Duodi 2 jour complémentaire an 222 de la Révolution, Jour du Génie"
 
    "Tridi 3 jour complémentaire an 222 de la Révolution, Jour du Travail"
+
+See L<http://datetime.mongueurs.net/Histoire/s-c/01-g.en.html>.
 
 In  addition,  when  using  C<g   f>,  you  can  now  reply  with  the
 pseudo-month "jour complémentaire", and then a number in the 1-to-5 or
@@ -86,7 +88,7 @@ feast for all days, for example:
 
 Of course, all feasts are available when answering to C<g f>.
 
-A big disadvantage is that  the size or F<cal-french.el> switches from
+A big disadvantage is that  the size or F<cal-french.el> inflates from
 about 10 K to about 30 K.
 
 Available with commit 6060f52, tag v3.
@@ -94,7 +96,7 @@ Available with commit 6060f52, tag v3.
 =head2 Feasts (second take)
 
 There are  two problems with  the functionality above, when  using the
-C<calendar-french-goto-date> function, tiggered by C<g f>.
+C<calendar-french-goto-date> function, triggered by C<g f>.
 
 First, if the user enters a normal (non-leap) year and then types C<j>
 and auto-complete twice  (tabulation), he gets a list  of 366 entries:
