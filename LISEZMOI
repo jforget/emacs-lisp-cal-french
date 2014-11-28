@@ -154,6 +154,29 @@ comme vous pouvez le voir dans le tout premier I<commit> de :
 en  octobre 2012, j'ai  toujours eu  l'intention d'utiliser  un script
 produisant du quasi-TAP pour tester mes modifications.
 
+=head2 Problèmes et points inconnus
+
+J'ai  testé   uniquement  la   version  multi-octet  des   chaînes  de
+caractères.  Je ne sais pas comment activer la version mono-octet.  Il
+faut  plus  particulièrement  tester  le  28 Fructidor  jour  du  maïs
+("mai\"s") et 18 Germinal jour de la ciguë ("cigue\"").
+
+La  variable   C<calendar-french-special-days-array>  et  sa  variante
+multi-octet  C<calendar-french-multibyte-special-days-array>  ne  sont
+plus       utilisées,      elles      sont       redondantes      avec
+C<calendar-french-feasts-array>  et sa  variante multi-octet.  Mais je
+les ai conservées, au cas où quelqu'un les aurait utilisées.
+
+Certaines  sources  historiques décrivent  le  4e jour  complémentaire
+comme étant le  "jour de la raison", d'autres  sources indiquent "jour
+de l'opinion".
+
+En  déterminant le genre  grammatical des  fêtes, je  n'ai pas  été en
+mesure de trouver le mot  "bagarade" (26 Fructidor). J'ai adopté "jour
+de la bagarade" parce qu'en français moderne, il existe un mot féminin
+"bigarade" pour  une variété  d'orange, ce qui  donnerait "jour  de la
+bigarade".
+
 =head2 D'où vient ce dépôt ?
 
 J'ai    commencé   par    cloner   le    miroir   Emacs    de   GitHub

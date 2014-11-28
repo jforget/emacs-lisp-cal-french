@@ -149,6 +149,27 @@ can see in the very first commit of:
 since at least October 2012, I always meant to check my updates with a
 TAP-alike script.
 
+=head2 Problems and unknowns
+
+I have tested only the multibyte version of strings, I do not know how
+to  activate the  singlebyte option.  We need  to check  especially 28
+Fructidor jour  du maïs  ("mai\"s") and 18  Germinal jour de  la ciguë
+("cigue\"").
+
+The variables  C<calendar-french-special-days-array> and its muti-byte
+variant C<calendar-french-multibyte-special-days-array>  are no longer
+used, they are  redundant with C<calendar-french-feasts-array> and its
+multi-byte variant. But  I have kept them in case someone  use it in a
+script.
+
+Some historical sources  say that "4 jour complémentaire"  is "jour de
+la raison", other sources say that it is "jour de l'opinion".
+
+When choosing "jour  du" vs "jour de  la", I was not able  to find the
+word "bagarade"  (26 Fructidor). I  have chosen "jour de  la bagarade"
+because in modern French, there is  a word "bigarade" for some kind of
+orange and it would give "jour de la bigarade".
+
 =head2 Where does this repository come from?
 
 I   first   cloned   the   Emacs   mirror   repository   from   GitHub
