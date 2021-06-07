@@ -4,7 +4,7 @@
 ; Generated test file for the Emacs cal-french.el program.
 ; Fichier de test généré pour tester le programme cal-french.el de Emacs
 ;
-; Copyright (C) 2014, Jean Forget
+; Copyright (C) 2014, 2021 Jean Forget
 ;
 ; Author: Jean Forget
 ; Maintainer: Jean Forget
@@ -40,7 +40,7 @@
                     (princ (format "ok %d
 " cal-french-check-num)))
                (t
-                    (princ (format "not ok %d %s %s
+                    (princ (format "not ok %d got %s expected %s
 " cal-french-check-num actual-string expected-string)))
          )
   )
@@ -63,6 +63,7 @@
     (cal-french-check-unit '(1813  8  4) "Sextidi 16 Thermidor an 21 de la Révolution, jour de la Guimauve")
     (cal-french-check-unit '(1816  9  4) "Octidi 18 Fructidor an 24 de la Révolution, jour du Nerprun")
     (cal-french-check-unit '(2000  1  1) "Duodi 12 Nivôse an 208 de la Révolution, jour de l'Argile")
+    (cal-french-check-unit '(2021  7 11) "Tridi 23 Messidor an 229 de la Révolution, jour des Haricots")
     (cal-french-check-unit '(2001  5 11) "Duodi 22 Floréal an 209 de la Révolution, jour de la Fritillaire")
     (cal-french-check-unit '(1792  9 22) "Primidi 1 Vendémiaire an 1 de la Révolution, jour du Raisin")
     (cal-french-check-unit '(1793  9 21) "Quintidi 5 jour complémentaire an 1 de la Révolution, jour des Récompenses")
