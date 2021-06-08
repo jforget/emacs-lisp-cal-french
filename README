@@ -2,6 +2,13 @@
 
 =encoding utf-8
 
+=head1 Warning
+
+The processing of  strings in the French Calendar  has been overhauled
+in  Emacs version  28.1. This  Git repository  applies to  older Emacs
+versions. It is very likely that the F<cal-french.el> program provided
+by this repo will be incompatible with recent Emacs versions.
+
 =head1 Presentation
 
 This repository is  a very partial fork of Emacs.   Only one code file

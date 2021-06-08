@@ -2,6 +2,14 @@
 
 =encoding utf-8
 
+=head1 Avertissement
+
+Le traitement  des chaînes de  caractères du calendrier  républicain a
+été  profondément remanié  dans la  version 28.1  d'Emacs. Le  présent
+dépôt Git  s'applique donc  aux versions  antérieures. Il  y a  fort à
+parier que le programme F<cal-french.el> proposé ici sera incompatible
+avec les versions récentes d'Emacs.
+
 =head1 Présentation
 
 Ce dépôt est un I<fork> très restreint d'Emacs.  Restreint parce qu'un
